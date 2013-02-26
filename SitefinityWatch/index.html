@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sitefinity authentication</title>
+        <link href="jquery-mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/main.css" rel="stylesheet" type="text/css" />
+
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>       
+        <script src="js/hello-world.js" type="text/javascript"></script>
+    </head> 
+    <body> 
+        <script src="jquery-mobile/jquery.parsequery.min.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery.urldecoder.min.js" type="text/javascript"></script>
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Sitefinity Watch!</h1>
+            </div>
+            <form id="sitef" action="">
+            <fieldset style="width:90%">
+        <dl>
+            <dt>
+                <label for="baseURl">
+                    Base Sitefinity URL:</label>
+            </dt>
+            <dd>
+                <input type="text" name="baseUrl" id="baseUrl" value="http://localhost" />
+            </dd>
+        </dl>
+    </fieldset>
+    <fieldset style="width:90%">
+        <dl>
+            <dt>
+                <label for="username">
+                    Username:</label>
+            </dt>
+            <dd>
+                <input type="text" name="username" id="username" value="admin" />
+            </dd>
+            <dt>
+                <label for="password">
+                    Password:</label>
+            </dt>
+            <dd>
+                <input type="password" name="password" id="password" />
+            </dd>
+            <dt>
+                <span id="signinMessage" style="color: Red">&nbsp;</span>
+            </dt>
+            <dd>
+                <input type="button" value="Get Token" onclick="getBootstrapToken()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="Sign-Out" onclick="signOut()" />
+            </dd>
+        </dl>
+    </fieldset>
+    <fieldset style="width:90%">
+        <dl>
+            <dt>
+                <label for="title">
+                    Result :</label>
+            </dt>
+            <dd>
+                <span id="subCount"></span>
+                <ul id="subscriberslist"></ul>
+                <input type="button" value="Get Subscribers" onclick="GetSubScribers()" />
+            </dd>
+        </dl>
+    </fieldset>
+    </form>
+            
+            <div data-role="footer" data-position="fixed" data-id="oneFooter">
+                <span class="footerText">Built with Icenium&trade;</span>
+            </div>
+        </div>        
+    </body>
+    </html>

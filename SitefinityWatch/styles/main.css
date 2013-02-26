@@ -1,0 +1,27 @@
+body
+{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.ui-footer
+{
+    text-align: center;    
+}
+
+.err
+{
+    color: red;
+}
+
+#map_canvas
+{
+    text-align:center;
+}
+
+.ui-input-text,    
+.ui-select
+{
+    width: 80% !important;
+    padding: 0.4em 0!important; 
+}
